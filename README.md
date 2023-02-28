@@ -1,3 +1,1 @@
-# Out Of This World
-
-Documentation coming soon
+# Documentation coming soon
