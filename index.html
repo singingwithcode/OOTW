@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project 1 - Out of This World</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Out of This World</h1>
+    </div>
+    <table border="0">
+        <tr>
+            <td>
+                <div class="element">
+                <div class="discYears"><svg id="discYears"></svg></div>
+            </div>
+            </td>
+            <td>
+                <div class="element">
+                <div class="planetSize" id="right"><svg id="planetSize"></svg></div>
+            </div>
+            </td>
+        </tr>
+    </table>
+    <table border="0">
+        <tr>
+            <td><div class="element"><svg id="quantPlanets"></svg><div></td>
+            <td><div class="element"><svg id="quantStars"></svg><div></td>
+            <td><div class="element"><svg id="quantStartType"></svg><div></td>
+            <td><div class="element"><svg id="quantDiscMeth"></svg><div></td>
+        </tr>
+        <tr>
+            <td><div class="element"><svg id="livability"></svg></div><div></td>
+            <td><div class="element"><svg id="earthDistance"></svg></div></td>
+            <td colspan="2" class="about">
+                <table>
+                    <tr>
+                        <td colspan="2"><div><span class="count countSelected"><b>0</b></span><span class="count"><b> Exoplanets Selected</b></span></div><br></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Binning Quantity</label>
+                            <input type="number" min="1" max="100" step="1" value="20" id="numBin">
+                        </td>
+                        <td>
+                            <button onClick='clearFilters()' type='button' class="clearButton" id="count">Filter Clear</button>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+
+                <b> By: Matthew Klich</b><br>
+                <span>Dataset From The <a href="https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=PS">NASA ExoPlanet Archive</a></span><br>
+                <span>Packages Used: D3</span>
+
+            </td>
+        </tr>
+    </table>
+
+    <button class="accordion">Records</button>
+    <div class="panel">
+        <div id="planetTable"></div>
+    </div>
+
+    <button class="accordion">System</button>
+    <div class="panel">
+        <svg id="systemG"></svg>
+        <div id="systemBrowser"></div>
+    </div>
+
+    <div id="tooltip"></div>
+    
+    <script src="js/d3.v6.min.js"></script>
+    <script src="js/charts/dualbarchart.js"></script>
+    <script src="js/charts/barchart.js"></script>
+    <script src="js/charts/scatterplot.js"></script>
+    <script src="js/charts/histogram.js"></script>
+    <script src="js/charts/linechart.js"></script>
+    <script src="js/charts/planettable.js"></script>
+    <script src="js/charts/bubbleplot.js"></script>
+    <script src="js/components/accordian.js"></script>
+    <script src="data/solarSys.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

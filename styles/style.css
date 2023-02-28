@@ -1,0 +1,190 @@
+.header {
+  padding: 10px;
+  text-align: center;
+  background: #9f6fff;
+  color: white;
+}
+
+/* Dasboard Tile Appearance */
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+  border: 0;
+}
+td, th { 
+  padding: 6px; 
+  border: 0px;
+  text-align: center; 
+}
+.element {
+  background-color: rgb(229, 229, 254);
+  margin: 5px 5px 10px 5px; /*T R B L*/
+} 
+.element:hover {
+  background-color: rgb(219, 219, 255);
+}
+
+/* ACCORDIANS */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+/* LINECHARTS */
+#discYears .chart-line {
+  fill: none;
+  stroke: rgb(112, 94, 167);
+  stroke-width: 4px;
+}
+
+/* SCATTERPLOTS */
+#planetSize circle {
+  cursor: pointer;
+}
+#planetSize circle:hover {
+  stroke: #000000;
+  stroke-width: 2px;
+}
+
+/* BARCHARTS */
+.bar {
+  shape-rendering: crispEdges;
+}
+.bar:hover {
+  stroke-width: 2px;
+  stroke: #ff4157;
+}
+.bar.active {
+  stroke-width: 3px;
+  stroke: #ff4157;
+}
+.barchart .bar {
+  cursor: pointer;
+  fill: rgb(112, 94, 167);
+}
+.barchart .x-axis .tick text {
+  cursor: pointer;
+}
+
+/* DUALBAR */
+#livability circle {
+  cursor: pointer;
+}
+#livability circle:hover {
+  stroke: #ff4157;
+  stroke-width: 2px;
+}
+#livability circle.active {
+  stroke: #ff4157;
+  stroke-width: 3px;
+}
+#livability .y0.axis path, .y0.axis line {
+  stroke: #ff4157;
+}
+
+/* BUTTONS */
+button {
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  transition-duration: 0.3s;
+}
+
+/* TITLE: Count Selected */
+.count {
+  font-size: 24px;
+}
+.countSelected {
+  color: #ff4157;
+}
+
+/* BUTTON: Filter Clear */
+.about .clearButton {
+  background-color: white;
+  color: #000000;
+}
+.about .clearButton:hover {
+  background-color: #ff4157;
+  color: white;
+}
+
+/* TABLE */
+#planetTable {
+  overflow-y: auto;
+  height: 500px;
+}
+#planetTable th, #planetTable td {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+#planetTable thead {
+  position: sticky;
+  width: 10%;
+  top: 0px;
+}
+#planetTable thead th {
+  background-color: rgb(112, 94, 167);
+  color: #fff;
+  transform: translate(0px, -2px);
+}
+#planetTable tbody tr:nth-child(even) {
+  background: #ffffff;
+  color: #000000;
+  cursor: pointer;
+}
+#planetTable tbody tr:nth-child(odd) {
+  background: rgb(229, 229, 254);
+  color: #000000;
+  cursor: pointer;
+}
+#planetTable tbody tr:hover {
+  cursor: pointer;
+  background: #fec3ca;
+}
+
+/* TOOLTIP */
+#tooltip {
+  position: absolute;
+  background: #ffffff;
+  box-shadow: 2px 2px 3px 0px rgb(92 92 92 / 0.5);
+  border: 1px solid #ddd;
+  font-size: 12px;
+  font-weight: 550;
+  min-width: 160px;
+  padding: 7px;
+}
+
+.tooltip-title {
+  font-weight: 550;
+  font-size: 15px;
+  color: #000000;
+}
