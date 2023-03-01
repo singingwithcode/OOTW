@@ -169,8 +169,7 @@ class Barchart {
                 .style('left', (event.pageX - 65) + 'px')   
                 .style('top', (event.pageY + 5) + 'px')
                 .html(`
-                    <div class="tooltip-title">${vis.config.xL}: ${d.key}</div>
-                    <div class="tooltip-title">${vis.config.xL}: ${d.count}</div>
+                    <div class="tooltip-title">${vis.config.xL}: ${d.value}</div>
                 `);
             })
             .on('mouseleave', () => {
